@@ -1,0 +1,23 @@
+<!-- app/views/users/register.html.erb -->
+
+<h1>Register</h1>
+
+<%= form_with(model: @user, url: register_users_path, method: :post) do |form| %>
+  <%= render 'shared/error_messages', object: @user %>
+
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation %>
+
+  <%= form.submit 'Register' %>
+<% end %>
+
+<%= link_to 'Login', login_users_path %>
