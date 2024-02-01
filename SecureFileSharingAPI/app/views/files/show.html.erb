@@ -1,0 +1,15 @@
+<!-- app/views/files/show.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Details</title>
+</head>
+<body>
+  <h1>File Details</h1>
+
+  <p><strong>Name:</strong> <%= @file.name %></p>
+  <p><strong>File Data:</strong> <%= @file.file_data %></p>
+
+  <%= link_to 'Back', files_path %>
+</body>
+</html>

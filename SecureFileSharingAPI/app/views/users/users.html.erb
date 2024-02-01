@@ -1,0 +1,19 @@
+<!-- app/views/users/users.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Details</title>
+</head>
+<body>
+  <h1>User Details</h1>
+
+  <% if @current_user %>
+    <p><strong>Username:</strong> <%= @current_user.username %></p>
+    <p><strong>Email:</strong> <%= @current_user.email %></p>
+  <% else %>
+    <p>No user details available. Please log in.</p>
+  <% end %>
+
+  <%= link_to 'Back to Files', files_path %>
+</body>
+</html>

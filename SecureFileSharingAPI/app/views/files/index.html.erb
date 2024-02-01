@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload</title>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <h1>File Upload</h1>
+
+  <%= form_with(model: @file, url: files_path, local: true, multipart: true) do |form| %>
+    <label for="file">Choose a file:</label>
+    <input type="file" name="file" id="file" required>
+    <input type="submit" value="Upload">
+  <% end %>
+
+  <h2>File List</h2>
+  <ul>
+    <% @files.each do |file| %>
+      <li>
+        <%= link_to file.name, file %>
+        <%= link_to 'Show', file %>
+        <%= link_to 'Delete', file, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
+
+

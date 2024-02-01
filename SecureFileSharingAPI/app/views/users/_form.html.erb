@@ -1,0 +1,14 @@
+<!-- app/views/users/_form.html.erb -->
+
+<%= form_with(model: @user, url: users_path, local: true) do |form| %>
+  <%= form.label :username %>
+  <%= form.text_field :username %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+
+  <%= form.submit 'Create User' %>
+<% end %>

@@ -1,0 +1,15 @@
+<!-- app/views/files/new.html.erb -->
+<%= form_with(model: @file, url: files_path, local: true, multipart: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :file_data %>
+  <%= form.file_field :file %>
+
+  <%= form.submit "Upload" %>
+<% end %>
+
+
+
+
+  
